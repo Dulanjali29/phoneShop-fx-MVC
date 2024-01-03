@@ -10,5 +10,7 @@ module lk.phoneshop.phoneshopfxmvc {
 
     exports lk.phoneshop.phoneshopfxmvc.controller;
     opens lk.phoneshop.phoneshopfxmvc.controller to javafx.fxml;
+    exports lk.phoneshop.phoneshopfxmvc.tm;
+    opens lk.phoneshop.phoneshopfxmvc.tm to javafx.base;
 
 }

@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="689.0" prefWidth="1032.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.phoneshop.phoneshopfxmvc.controller.CustomerViewController">
+<AnchorPane fx:id="root" prefHeight="689.0" prefWidth="1032.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.phoneshop.phoneshopfxmvc.controller.CustomerViewController">
    <children>
       <Label layoutX="344.0" layoutY="34.0" text="Customer View" textFill="#18266b" underline="true">
          <font>

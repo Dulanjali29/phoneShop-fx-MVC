@@ -11,58 +11,53 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.phoneshop.phoneshopfxmvc.controller.PhoneViewController">
+<AnchorPane fx:id="root" prefHeight="699.0" prefWidth="1042.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="lk.phoneshop.phoneshopfxmvc.controller.PhoneViewController">
    <children>
-      <AnchorPane prefHeight="699.0" prefWidth="1042.0">
-         <children>
-            <Label layoutX="344.0" layoutY="34.0" text="Phone View" textFill="#18266b" underline="true">
-               <font>
-                  <Font size="32.0" />
-               </font>
-            </Label>
-            <TextField fx:id="txtpid" layoutX="40.0" layoutY="201.0" prefHeight="31.0" prefWidth="219.0" promptText="PID" style="-fx-background-radius: 5; -fx-border-color: #120C60; -fx-border-radius: 5;" />
-            <Button layoutX="818.0" layoutY="101.0" mnemonicParsing="false" onAction="#search" prefHeight="31.0" prefWidth="139.0" style="-fx-background-radius: 5; -fx-background-color: #2990a6;" text="Search" textFill="#f5f5f5">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Button>
-            <TextField fx:id="txtuid" layoutX="583.0" layoutY="101.0" prefHeight="31.0" prefWidth="219.0" promptText="Search Item" style="-fx-background-radius: 5; -fx-border-color: #120C60; -fx-border-radius: 5;" />
-            <Separator layoutX="40.0" layoutY="174.0" prefHeight="0.0" prefWidth="934.0" />
-            <TextField fx:id="txtbrand" layoutX="275.0" layoutY="201.0" prefHeight="31.0" prefWidth="219.0" promptText="Brand" style="-fx-background-radius: 5; -fx-border-color: #120C60; -fx-border-radius: 5;" />
-            <TextField fx:id="txtmodel" layoutX="516.0" layoutY="201.0" prefHeight="31.0" prefWidth="219.0" promptText="Model" style="-fx-background-radius: 5; -fx-border-color: #120C60; -fx-border-radius: 5;" />
-            <TextField fx:id="txtram" layoutX="763.0" layoutY="201.0" prefHeight="31.0" prefWidth="219.0" promptText="RAM" style="-fx-background-radius: 5; -fx-border-color: #120C60; -fx-border-radius: 5;" />
-            <TextField fx:id="txtprice" layoutX="40.0" layoutY="254.0" prefHeight="31.0" prefWidth="219.0" promptText="Price" style="-fx-background-radius: 5; -fx-border-color: #120C60; -fx-border-radius: 5;" />
-            <Button layoutX="507.0" layoutY="299.0" mnemonicParsing="false" onAction="#save" prefHeight="31.0" prefWidth="139.0" style="-fx-background-radius: 5; -fx-background-color: #527141;" text="Save" textFill="#f5f5f5">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Button>
-            <Button layoutX="663.0" layoutY="298.0" mnemonicParsing="false" onAction="#update" prefHeight="31.0" prefWidth="139.0" style="-fx-background-radius: 5; -fx-background-color: #011a87;" text="Update" textFill="#f5f5f5">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Button>
-            <Button layoutX="818.0" layoutY="299.0" mnemonicParsing="false" onAction="#delete" prefHeight="31.0" prefWidth="139.0" style="-fx-background-radius: 5; -fx-background-color: #ea1919;" text="Delete" textFill="#f5f5f5">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Button>
-            <TableView fx:id="tblphone" layoutX="51.0" layoutY="374.0" prefHeight="282.0" prefWidth="942.0">
-               <columns>
-                  <TableColumn prefWidth="112.0" text="PID" />
-                  <TableColumn prefWidth="201.0" text="Brand" />
-                  <TableColumn prefWidth="248.0" text="Model" />
-                  <TableColumn prefWidth="182.0" text="RAM" />
-                  <TableColumn prefWidth="198.0" text="Price" />
-               </columns>
-            </TableView>
-         </children>
-      </AnchorPane>
-      <ImageView fitHeight="47.0" fitWidth="49.0" layoutX="50.0" layoutY="36.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="47.0" fitWidth="49.0" layoutX="76.0" layoutY="34.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@assest/icons8-go-back-48.png" />
          </image>
       </ImageView>
+      <Label layoutX="344.0" layoutY="34.0" text="Phone View" textFill="#18266b" underline="true">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtpid" layoutX="40.0" layoutY="201.0" prefHeight="31.0" prefWidth="219.0" promptText="PID" style="-fx-background-radius: 5; -fx-border-color: #120C60; -fx-border-radius: 5;" />
+      <Button layoutX="818.0" layoutY="101.0" mnemonicParsing="false" onAction="#search" prefHeight="31.0" prefWidth="139.0" style="-fx-background-radius: 5; -fx-background-color: #2990a6;" text="Search" textFill="#f5f5f5">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtuid" layoutX="583.0" layoutY="101.0" prefHeight="31.0" prefWidth="219.0" promptText="Search Item" style="-fx-background-radius: 5; -fx-border-color: #120C60; -fx-border-radius: 5;" />
+      <Separator layoutX="40.0" layoutY="174.0" prefHeight="0.0" prefWidth="934.0" />
+      <TextField fx:id="txtbrand" layoutX="275.0" layoutY="201.0" prefHeight="31.0" prefWidth="219.0" promptText="Brand" style="-fx-background-radius: 5; -fx-border-color: #120C60; -fx-border-radius: 5;" />
+      <TextField fx:id="txtmodel" layoutX="516.0" layoutY="201.0" prefHeight="31.0" prefWidth="219.0" promptText="Model" style="-fx-background-radius: 5; -fx-border-color: #120C60; -fx-border-radius: 5;" />
+      <TextField fx:id="txtram" layoutX="763.0" layoutY="201.0" prefHeight="31.0" prefWidth="219.0" promptText="RAM" style="-fx-background-radius: 5; -fx-border-color: #120C60; -fx-border-radius: 5;" />
+      <TextField fx:id="txtprice" layoutX="40.0" layoutY="254.0" prefHeight="31.0" prefWidth="219.0" promptText="Price" style="-fx-background-radius: 5; -fx-border-color: #120C60; -fx-border-radius: 5;" />
+      <Button layoutX="507.0" layoutY="299.0" mnemonicParsing="false" onAction="#save" prefHeight="31.0" prefWidth="139.0" style="-fx-background-radius: 5; -fx-background-color: #527141;" text="Save" textFill="#f5f5f5">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="663.0" layoutY="298.0" mnemonicParsing="false" onAction="#update" prefHeight="31.0" prefWidth="139.0" style="-fx-background-radius: 5; -fx-background-color: #011a87;" text="Update" textFill="#f5f5f5">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="818.0" layoutY="299.0" mnemonicParsing="false" onAction="#delete" prefHeight="31.0" prefWidth="139.0" style="-fx-background-radius: 5; -fx-background-color: #ea1919;" text="Delete" textFill="#f5f5f5">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tblphone" layoutX="51.0" layoutY="374.0" prefHeight="282.0" prefWidth="942.0">
+         <columns>
+            <TableColumn prefWidth="112.0" text="PID" />
+            <TableColumn prefWidth="201.0" text="Brand" />
+            <TableColumn prefWidth="248.0" text="Model" />
+            <TableColumn prefWidth="182.0" text="RAM" />
+            <TableColumn prefWidth="198.0" text="Price" />
+         </columns>
+      </TableView>
    </children>
 </AnchorPane>

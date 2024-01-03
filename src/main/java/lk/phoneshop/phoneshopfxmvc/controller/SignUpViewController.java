@@ -74,15 +74,13 @@ public class SignUpViewController {
 
     }
     @FXML
-    void signin(MouseEvent event) {
-        try {
+    void signin(MouseEvent event) throws IOException {
+
             Stage stage = (Stage) this.root.getScene().getWindow();
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("login-view.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             stage.setScene(scene);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+
     }
 
 }
