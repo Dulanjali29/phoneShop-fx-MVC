@@ -51,8 +51,8 @@ public  static ArrayList<Phone> getAllPhone(){
         ResultSet rs=stm.executeQuery();
         ArrayList<Phone> phones=new ArrayList<>();
 
-        while (rs.next()){
-            Phone phone=new Phone();
+        while (rs.next()) {
+            Phone phone = new Phone();
             phone.setId(rs.getString(1));
             phone.setBrand(rs.getString(2));
             phone.setModel(rs.getString(3));

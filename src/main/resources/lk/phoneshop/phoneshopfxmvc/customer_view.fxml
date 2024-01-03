@@ -24,7 +24,7 @@
             <Font size="13.0" />
          </font>
       </Button>
-      <TextField fx:id="txtuid" layoutX="583.0" layoutY="101.0" prefHeight="31.0" prefWidth="219.0" promptText="Search Item" style="-fx-background-radius: 5; -fx-border-color: #120C60; -fx-border-radius: 5;" />
+      <TextField fx:id="txtsearch" layoutX="583.0" layoutY="101.0" prefHeight="31.0" prefWidth="219.0" promptText="Search Customer ID" style="-fx-background-radius: 5; -fx-border-color: #120C60; -fx-border-radius: 5;" />
       <Separator layoutX="40.0" layoutY="174.0" prefHeight="0.0" prefWidth="934.0" />
       <TextField fx:id="txtnic" layoutX="275.0" layoutY="201.0" prefHeight="31.0" prefWidth="219.0" promptText="Customer NIC" style="-fx-background-radius: 5; -fx-border-color: #120C60; -fx-border-radius: 5;" />
       <TextField fx:id="txtnm" layoutX="522.0" layoutY="201.0" prefHeight="31.0" prefWidth="219.0" promptText="Customer Name" style="-fx-background-radius: 5; -fx-border-color: #120C60; -fx-border-radius: 5;" />
