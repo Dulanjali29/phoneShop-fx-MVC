@@ -7,30 +7,25 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="478.0" prefWidth="424.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.phoneshop.phoneshopfxmvc.controller.SignUpViewController">
+<AnchorPane fx:id="root" prefHeight="476.0" prefWidth="425.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.phoneshop.phoneshopfxmvc.controller.SignUpViewController">
    <children>
-      <AnchorPane layoutX="5.0" prefHeight="476.0" prefWidth="425.0">
-         <children>
-            <Label layoutX="168.0" layoutY="70.0" text="Sign Up" textFill="#18266b">
-               <font>
-                  <Font size="27.0" />
-               </font>
-            </Label>
-            <TextField fx:id="txtemail" layoutX="107.0" layoutY="221.0" prefHeight="31.0" prefWidth="219.0" promptText="E mail" style="-fx-background-radius: 20; -fx-border-color: #120C60; -fx-border-radius: 20;" />
-            <PasswordField fx:id="txtpw" layoutX="106.0" layoutY="277.0" prefHeight="31.0" prefWidth="219.0" promptText="Password" style="-fx-background-radius: 20; -fx-border-color: #120C60; -fx-border-radius: 20;" />
-            <Button layoutX="109.0" layoutY="344.0" mnemonicParsing="false" onAction="#createacc" prefHeight="31.0" prefWidth="219.0" style="-fx-background-radius: 20; -fx-background-color: #120C60;" text="Create Account" textFill="#f5f5f5">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Button>
-            <Label fx:id="lblcreateacc" layoutX="239.0" layoutY="405.0" onMouseClicked="#signin" text="Sign In" textFill="#120c60" underline="true">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Label>
-            <TextField fx:id="txtuid" layoutX="109.0" layoutY="163.0" prefHeight="31.0" prefWidth="219.0" promptText="User Id" style="-fx-background-radius: 20; -fx-border-color: #120C60; -fx-border-radius: 20;" />
-         </children>
-      </AnchorPane>
+      <Label layoutX="168.0" layoutY="70.0" text="Sign Up" textFill="#18266b">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtemail" layoutX="107.0" layoutY="221.0" prefHeight="31.0" prefWidth="219.0" promptText="E mail" style="-fx-background-radius: 20; -fx-border-color: #120C60; -fx-border-radius: 20;" />
+      <PasswordField fx:id="txtpw" layoutX="106.0" layoutY="277.0" prefHeight="31.0" prefWidth="219.0" promptText="Password" style="-fx-background-radius: 20; -fx-border-color: #120C60; -fx-border-radius: 20;" />
+      <Button layoutX="109.0" layoutY="344.0" mnemonicParsing="false" onAction="#createacc" prefHeight="31.0" prefWidth="219.0" style="-fx-background-radius: 20; -fx-background-color: #120C60;" text="Create Account" textFill="#f5f5f5">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblcreateacc" layoutX="239.0" layoutY="405.0" onMouseClicked="#signin" text="Sign In" textFill="#120c60" underline="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtuid" layoutX="109.0" layoutY="163.0" prefHeight="31.0" prefWidth="219.0" promptText="User Id" style="-fx-background-radius: 20; -fx-border-color: #120C60; -fx-border-radius: 20;" />
    </children>
 </AnchorPane>

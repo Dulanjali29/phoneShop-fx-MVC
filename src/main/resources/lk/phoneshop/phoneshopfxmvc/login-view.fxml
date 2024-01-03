@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="477.0" prefWidth="433.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.phoneshop.phoneshopfxmvc.controller.LoginViewController">
+<AnchorPane fx:id="root" prefHeight="477.0" prefWidth="433.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.phoneshop.phoneshopfxmvc.controller.LoginViewController">
    <children>
       <Label layoutX="176.0" layoutY="65.0" text="Sign In" textFill="#18266b">
          <font>
