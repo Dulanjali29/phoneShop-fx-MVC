@@ -1,5 +1,6 @@
 package lk.phoneshop.phoneshopfxmvc.controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -33,8 +34,9 @@ public class SignUpViewController {
     @FXML
     private TextField txtuid;
 
+
     @FXML
-    void createacc(MouseEvent event) throws SQLException {
+    void createacc(ActionEvent event)  {
      String uid=txtuid.getText();
      String uemail=txtemail.getText();
      String pw=txtpw.getText();
@@ -65,12 +67,13 @@ public class SignUpViewController {
                 alert.setContentText("Plese Try Agan! ");
                 alert.show();
             }
-        }catch (ClassNotFoundException e){
-            throw new RuntimeException(e);
+
 
         }catch (SQLException e){
             throw new RuntimeException(e);
-        }
+        }catch (ClassNotFoundException e){
+            throw new RuntimeException(e);
+         }
 
     }
     @FXML
