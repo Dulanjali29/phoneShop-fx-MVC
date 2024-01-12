@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" prefHeight="699.0" prefWidth="1042.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.phoneshop.phoneshopfxmvc.controller.PhoneViewController">
+<AnchorPane fx:id="root" prefHeight="701.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.phoneshop.phoneshopfxmvc.controller.PhoneViewController">
    <children>
       <ImageView fitHeight="47.0" fitWidth="49.0" layoutX="76.0" layoutY="34.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -50,14 +50,16 @@
             <Font size="13.0" />
          </font>
       </Button>
-      <TableView fx:id="tblphone" layoutX="51.0" layoutY="374.0" prefHeight="282.0" prefWidth="942.0">
+      <TableView fx:id="tblphone" layoutX="51.0" layoutY="374.0" prefHeight="248.0" prefWidth="934.0">
          <columns>
             <TableColumn prefWidth="112.0" text="PID" />
-            <TableColumn prefWidth="201.0" text="Brand" />
-            <TableColumn prefWidth="248.0" text="Model" />
-            <TableColumn prefWidth="182.0" text="RAM" />
-            <TableColumn prefWidth="198.0" text="Price" />
+            <TableColumn prefWidth="176.0" text="Brand" />
+            <TableColumn prefWidth="179.0" text="Model" />
+            <TableColumn prefWidth="172.0" text="RAM" />
+            <TableColumn minWidth="0.0" prefWidth="164.0" text="Price" />
+            <TableColumn prefWidth="130.0" text="Qty" />
          </columns>
       </TableView>
+      <TextField fx:id="txtqty" layoutX="275.0" layoutY="254.0" prefHeight="31.0" prefWidth="219.0" promptText="Qty" style="-fx-background-radius: 5; -fx-border-color: #120C60; -fx-border-radius: 5;" />
    </children>
 </AnchorPane>

@@ -6,6 +6,8 @@ private String brand;
 private String model;
 private int ram;
 private double price;
+private int qty;
+
 
     @Override
     public String toString() {
@@ -15,6 +17,7 @@ private double price;
                 ", model='" + model + '\'' +
                 ", ram=" + ram +
                 ", price=" + price +
+                ", qty=" + qty +
                 '}';
     }
 
@@ -22,12 +25,13 @@ private double price;
         return id;
     }
 
-    public PhoneTM(String id, String brand, String model, int ram, double price) {
+    public PhoneTM(String id, String brand, String model, int ram, double price,int qty) {
         this.id = id;
         this.brand = brand;
         this.model = model;
         this.ram = ram;
         this.price = price;
+        this.qty=qty;
     }
 
     public void setId(String id) {
@@ -64,5 +68,13 @@ private double price;
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public int getQty() {
+        return qty;
+    }
+
+    public void setQty(int qty) {
+        this.qty = qty;
     }
 }

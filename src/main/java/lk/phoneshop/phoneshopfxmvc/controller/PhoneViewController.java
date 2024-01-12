@@ -34,7 +34,8 @@ public class PhoneViewController implements Initializable {
 
     @FXML
     private TextField txtmodel;
-
+    @FXML
+    private TextField txtqty;
     @FXML
     private TextField txtpid;
 
@@ -68,7 +69,8 @@ public class PhoneViewController implements Initializable {
     String model=txtmodel.getText();
     int ram=Integer.parseInt(txtram.getText());
     double price=Double.parseDouble(txtprice.getText());
-        PhoneModel.savePhone(new Phone(pid,brand,model,ram,price));
+    int qty=Integer.parseInt(txtqty.getText());
+        PhoneModel.savePhone(new Phone(pid,brand,model,ram,price,qty));
         clear();
     }
 
@@ -82,7 +84,7 @@ public class PhoneViewController implements Initializable {
     txtmodel.setText(search.getModel());
     txtram.setText(Integer.toString(search.getRam()));
     txtprice.setText(Double.toString(search.getPrice()));
-
+    txtqty.setText(Integer.toString(search.getQty()));
 
     }
 
@@ -93,7 +95,9 @@ public class PhoneViewController implements Initializable {
         String model=txtmodel.getText();
         int ram=Integer.parseInt(txtram.getText());
         double price=Double.parseDouble(txtprice.getText());
-        PhoneModel.updatePhone(new Phone(pid,brand,model,ram,price));
+        int qty=Integer.parseInt(txtqty.getText());
+//        int qty=Integer.parseInt(txt)
+        PhoneModel.updatePhone(new Phone(pid,brand,model,ram,price,qty));
         clear();
     }
 
@@ -103,6 +107,8 @@ public class PhoneViewController implements Initializable {
         txtmodel.clear();
         txtram.clear();
         txtprice.clear();
+        txtqty.clear();
+
     }
 
     @Override
@@ -117,7 +123,7 @@ public class PhoneViewController implements Initializable {
         ArrayList<PhoneTM> tms=new ArrayList<>();
 
         for(Phone p: allPhone){
-            tms.add(new PhoneTM(p.getId(),p.getBrand(),p.getModel(),p.getRam(),p.getPrice()));
+            tms.add(new PhoneTM(p.getId(),p.getBrand(),p.getModel(),p.getRam(),p.getPrice(),p.getQty()));
         }
         tblphone.setItems(FXCollections.observableArrayList(tms));
     }

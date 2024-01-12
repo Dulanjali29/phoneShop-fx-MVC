@@ -23,8 +23,11 @@ public class DashboardViewController {
     }
 
     @FXML
-    void order(ActionEvent event) {
-
+    void order(ActionEvent event) throws IOException{
+        Stage stage = (Stage) this.root.getScene().getWindow();
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("order-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setScene(scene);
     }
 
     @FXML

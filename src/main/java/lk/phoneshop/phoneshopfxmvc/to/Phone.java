@@ -6,13 +6,15 @@ public class Phone {
     private String model;
     private int ram;
     private double price;
-
-    public Phone(String id, String brand, String model, int ram, double price) {
+private int qty;
+    public Phone(String id, String brand, String model, int ram, double price,int qty) {
         this.id = id;
         this.brand = brand;
         this.model = model;
         this.ram = ram;
         this.price = price;
+        this.qty=qty;
+
     }
 
     public Phone() {
@@ -57,5 +59,13 @@ public class Phone {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public int getQty() {
+        return qty;
+    }
+
+    public void setQty(int qty) {
+        this.qty = qty;
     }
 }

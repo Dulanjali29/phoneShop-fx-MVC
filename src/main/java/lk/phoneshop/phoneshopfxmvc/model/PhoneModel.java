@@ -1,14 +1,18 @@
 package lk.phoneshop.phoneshopfxmvc.model;
 
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import lk.phoneshop.phoneshopfxmvc.db.DBConnection;
+import lk.phoneshop.phoneshopfxmvc.tm.OrderDetailTM;
 import lk.phoneshop.phoneshopfxmvc.to.Phone;
 
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.ResourceBundle;
 
 public class PhoneModel {
 
@@ -16,12 +20,13 @@ public  static boolean savePhone(Phone phone){
     try {
         Connection connection = DBConnection.getDBConnection().getConnection();
 
-        PreparedStatement stm = connection.prepareStatement("INSERT INTO phone VALUES(?,?,?,?,?)");
+        PreparedStatement stm = connection.prepareStatement("INSERT INTO phone VALUES(?,?,?,?,?,?)");
         stm.setObject(1, phone.getId());
         stm.setObject(2, phone.getBrand());
         stm.setObject(3, phone.getModel());
         stm.setObject(4, phone.getRam());
         stm.setObject(5, phone.getPrice());
+        stm.setObject(6,phone.getQty());
 
         int executed = stm.executeUpdate();
 
@@ -58,6 +63,7 @@ public  static ArrayList<Phone> getAllPhone(){
             phone.setModel(rs.getString(3));
             phone.setRam(rs.getInt(4));
             phone.setPrice(rs.getDouble(5));
+            phone.setQty(rs.getInt(6));
 
             phones.add(phone);
         }
@@ -87,6 +93,7 @@ public static Phone searchPhone(String uid){
                 phone.setModel(rs.getString(3));
                 phone.setRam(rs.getInt(4));
                 phone.setPrice(rs.getDouble(5));
+                phone.setQty(rs.getInt(6));
             }while (rs.next()) ;
         }
        return phone;
@@ -102,12 +109,13 @@ public static boolean updatePhone(Phone phone){
     Connection connection = null;
     try {
         connection = DBConnection.getDBConnection().getConnection();
-        PreparedStatement stm = connection.prepareStatement("UPDATE phone SET  brand=?, model=?, ram=?, price=? WHERE pid=?");
+        PreparedStatement stm = connection.prepareStatement("UPDATE phone SET  brand=?, model=?, ram=?, price=?,qty=? WHERE pid=?");
         stm.setString(1,phone.getBrand());
         stm.setString(2,phone.getModel());
         stm.setInt(3,phone.getRam());
         stm.setDouble(4,phone.getPrice());
-        stm.setString(5,phone.getId());
+        stm.setInt(5,phone.getQty());
+        stm.setString(6,phone.getId());
 
         int executed =stm.executeUpdate();
         if(executed>0){
@@ -157,4 +165,24 @@ public static boolean updatePhone(Phone phone){
       }
 return true;
   }
+  public static  ArrayList <String> getPhoneIds(){
+      try {
+          Connection connection=DBConnection.getDBConnection().getConnection();
+          PreparedStatement stm=connection.prepareStatement("SELECT pid FROM phone");
+          ResultSet rs=stm.executeQuery();
+          ArrayList<String> phoneIds=new ArrayList<>();
+
+          while (rs.next()) {
+
+             phoneIds.add(rs.getString(1));
+          }
+          return phoneIds;
+      } catch (SQLException e) {
+          throw new RuntimeException(e);
+      } catch (ClassNotFoundException e) {
+          throw new RuntimeException(e);
+      }
+  }
+
+
 }
